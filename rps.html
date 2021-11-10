@@ -1,5 +1,13 @@
 <script>
 
+  let wins = 0
+  let ties = 0
+  let losses = 0
+
+// const choices = ['r','p','s']
+
+ for (let i = 0; i < 10; i++) {
+  
   let userChoice = prompt("Rock, Paper, or scissors?(type r, p, or s)")
   let computerChoice = Math.random ();
 
@@ -11,7 +19,7 @@
     computerChoice = "s"
   }
 
-for (let i = 1; i < 10; i++) {
+ 
 
 let choice1 = userChoice
 let choice2 = computerChoice
@@ -40,9 +48,26 @@ let choice2 = computerChoice
     }
   }
 }
+
+alert(`
+______________
+Results:
+
+wins: ${wins}
+ties: ${ties}
+losses: ${losses}
+
+Refresh to play again!
+__________________
+
+
+`)
+
+
+
   console.log("User Choice: " + userChoice);
   console.log("Computer Choice: " + computerChoice);
   compare(userChoice, computerChoice);
-    // playagain = prompt("Do you want to play again, y or n");
+  
   
 </script>
