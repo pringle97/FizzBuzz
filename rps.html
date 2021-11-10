@@ -1,0 +1,48 @@
+<script>
+
+  let userChoice = prompt("Rock, Paper, or scissors?(type r, p, or s)")
+  let computerChoice = Math.random ();
+
+  if (computerChoice < 0.34) {
+   computerChoice = "r";
+  } else if(computerChoice <= 0.67) {
+   computerChoice = "p";
+  } else {
+    computerChoice = "s"
+  }
+
+for (let i = 1; i < 10; i++) {
+
+let choice1 = userChoice
+let choice2 = computerChoice
+
+  function compare (choice1, choice2) {
+    if (choice1 === choice2) {
+      alert ("It's a tie!");
+    }
+    else if (choice1 === "r") {
+      if (choice2 === "p"){
+        alert ("you lose! try again");
+      } else
+        alert("you win!");
+    }
+    else if (choice1 === "p"){
+      if (choice2 === "s"){
+        alert ("you lose! try again");
+      } else
+        alert ('you win!')
+    }
+    else if (choice1 === "s"){
+      if (choice2 === "r"){
+        alert ("you lose! try again");
+      } else
+        alert ('you win!')
+    }
+  }
+}
+  console.log("User Choice: " + userChoice);
+  console.log("Computer Choice: " + computerChoice);
+  compare(userChoice, computerChoice);
+    // playagain = prompt("Do you want to play again, y or n");
+  
+</script>
